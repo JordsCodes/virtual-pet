@@ -1,9 +1,8 @@
 const Pet = require('../src/pet');
 
 describe('constructor', () => {
-
   it('returns an object', () => {
-    const pet = new Pet('Fido');
+  const pet = new Pet('Fido');
     expect(pet).toBeInstanceOf(Object);
   });
 
@@ -19,7 +18,6 @@ describe('constructor', () => {
 });
 
 describe('growUp', () => {
-
   it('throws an error if the pet is not alive', () => {
     const pet = new Pet('Fido');
     pet.age = 30;
@@ -43,7 +41,6 @@ describe('growUp', () => {
 });
 
 describe('walk', () => {
-
   it ('increases fitness by 4, without exceeding MAXIMUM_FITNESS', () => {
     const pet = new Pet('Fido');
     pet.fitness = 4; 
@@ -59,7 +56,6 @@ describe('walk', () => {
 });
 
 describe('feed', () => {
-
   it ('decreases hunger, without being less than MINIMUM_HUNGER', () => {
     const pet = new Pet('Fido');
     pet.hunger = 5;
@@ -75,7 +71,6 @@ describe('feed', () => {
 });
 
 describe('checkup', () => {
-
   it ('return "I need a walk" if fitness <= 3', () => {
     const pet = new Pet('Fido');
     pet.fitness = 3;
@@ -102,7 +97,6 @@ describe('checkup', () => {
 });
 
 describe('isAlive', () => {
-
   it ('return true if fitness > 0, hunger < 10, age < 30', () => {
     const pet = new Pet('Fido');
     pet.fitness = 0, pet.hunger = 10, pet.age = 30;
@@ -119,7 +113,6 @@ describe('isAlive', () => {
 });
 
 describe('adoptChild', () => {
-
   it('adds child array element to .children property', () => {
     const parent = new Pet('Fido');
     const child = new Pet('Fido Jr');
